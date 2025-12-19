@@ -1,0 +1,10 @@
+pypdf
+pdfplumber
+PyMuPDF
+pdf2image
+torch
+pytesseract
+numpy
+opencv-python
+Pillow
+ultralytics
