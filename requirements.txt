@@ -7,4 +7,3 @@ pytesseract
 numpy
 opencv-python
 Pillow
-ultralytics

@@ -34,24 +34,29 @@
     
 #             print(index, table, sep="\n")
 #             print("\n\n")
+import pytesseract
+from PIL import Image
+
+img = Image.open("Screenshot 2025-12-22 234741.png")
+print(pytesseract.image_to_string(img))
 
 
 
 
 ##EXTRACTING IMAGE USING PYMUPDF
-import fitz
-from PIL import Image
+# import fitz
+# from PIL import Image
 
-pdf_path = "ROVA USECASE.pdf"
-page_number = 16
+# pdf_path = "ROVA USECASE.pdf"
+# page_number = 16
 
-doc = fitz.open(pdf_path)
-page = doc.load_page(page_number)
-# zoom = 3
-dpi=300
-zoom=dpi / 72
-matrix = fitz.Matrix(zoom, zoom)
-pix = page.get_pixmap(matrix=matrix, alpha=False)
-img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-img.show()
+# doc = fitz.open(pdf_path)
+# page = doc.load_page(page_number)
+# # zoom = 3
+# dpi=300
+# zoom=dpi / 72
+# matrix = fitz.Matrix(zoom, zoom)
+# pix = page.get_pixmap(matrix=matrix, alpha=False)
+# img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+# img.show()
 # Now 'img' is a PIL Image object of the PDF page
